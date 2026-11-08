@@ -110,3 +110,11 @@ the update fails, then investigate the error. The one-off command does not run
 scripts in `updates`; the normal service runs them before each scheduled
 update, including on startup. Nginx cannot serve the repository while the
 F-Droid service is stopped.
+
+# Cloudflare Tunnel
+
+- Fill in the `.env` file with your Cloudflare Tunnel credentials
+- Start the container
+  - `docker compose --env-file ./.env -f docker-compose-tunnel.yml up -d`
+- Remove the container
+  - `docker compose --env-file ./.env -f docker-compose-tunnel.yml down`

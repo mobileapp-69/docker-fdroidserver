@@ -1,3 +1,4 @@
+name: fdroidserver
 services:
   fdroid:
     image: austozi/fdroidserver:latest
@@ -13,7 +14,7 @@ services:
     expose:
       - 8080
     networks:
-      - frontend
+      - fdroid_net
   nginx:
     image: nginx:alpine
     container_name: fdroid_nginx
@@ -25,7 +26,7 @@ services:
     depends_on:
       - fdroid
     networks:
-      - fdriod_net
+      - fdroid_net
 networks:
-  fdriod_net:
-    name: fdriod_net
+  fdroid_net:
+    name: fdroid_net

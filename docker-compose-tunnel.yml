@@ -1,0 +1,18 @@
+name: fdroidserver
+services:
+  cloudflare-tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: pf_mobile_tunnel
+    restart: always
+    command: tunnel --no-autoupdate run --url http://host.docker.internal:${PORT:-3001} --token ${CF_TUNNEL_TOKEN}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      - CF_TUNNEL_TOKEN=${CF_TUNNEL_TOKEN}
+      - PORT=${PORT:-8080}
+    networks:
+      - fdroid_net
+networks:
+  fdroid_net:
+    name: fdroid_net
+    external: true

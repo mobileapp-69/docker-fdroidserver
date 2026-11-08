@@ -2,3 +2,4 @@ fdroid/*
 !fdroid/_dummy.txt
 updates/*
 !updates/_dummy.txt
+.env
