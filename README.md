@@ -54,9 +54,9 @@ Edit `fdroid/config.yml` directly, preserving the signing settings. For example:
 
 ```yaml
 repo_url: https://fdroid.example.com/fdroid/repo
-repo_name: F-Droid App Store
+repo_name: CPE F-Droid App Store
 repo_description: An app store for Android devices.
-repo_icon: fdroid.png
+repo_icon: logo.png
 ```
 
 Replace `repo_url` with the actual address clients will use, ending in
