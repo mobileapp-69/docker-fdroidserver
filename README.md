@@ -61,7 +61,7 @@ repo_icon: logo.png
 
 Replace `repo_url` with the actual address clients will use, ending in
 `/fdroid/repo`. For local testing, this can be
-`http://localhost:8080/fdroid/repo`; `localhost` on another device refers to
+`http://localhost:8081/fdroid/repo`; `localhost` on another device refers to
 that device, not your server. Place your icon at `fdroid/fdroid.png`, or
 adjust `repo_icon` to match its location. If the icon is missing, F-Droid
 generates a placeholder.
@@ -77,7 +77,7 @@ docker compose ps
 docker compose logs --tail 50 fdroid
 ```
 
-Visit <http://localhost:8080/fdroid/repo/>. Requests to `/` redirect there.
+Visit <http://localhost:8081/fdroid/repo/>. Requests to `/` redirect there.
 Nginx removes the `/fdroid/repo/` prefix before forwarding requests to the
 F-Droid web server.
 
