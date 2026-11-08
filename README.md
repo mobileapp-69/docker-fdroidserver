@@ -111,7 +111,9 @@ scripts in `updates`; the normal service runs them before each scheduled
 update, including on startup. Nginx cannot serve the repository while the
 F-Droid service is stopped.
 
-# Cloudflare Tunnel
+## Cloudflare Tunnel
+
+For local development, you can use this setting to host your store.
 
 - Fill in the `.env` file with your Cloudflare Tunnel credentials
 - Start the container
