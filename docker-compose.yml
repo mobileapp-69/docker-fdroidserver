@@ -25,7 +25,7 @@ services:
     depends_on:
       - fdroid
     networks:
-      - frontend
+      - fdriod_net
 networks:
-  frontend:
+  fdriod_net:
     name: fdriod_net
