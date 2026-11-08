@@ -1,6 +1,6 @@
 fdroid/*
 !fdroid/_dummy.txt
-!fdroid/logo.jpg
+!fdroid/logo.png
 updates/*
 !updates/_dummy.txt
 .env
